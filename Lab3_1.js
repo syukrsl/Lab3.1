@@ -234,3 +234,39 @@ this.name = name;
 this.age = age;
 this.human
 }
+
+const person1 = new Person("Syukri", 28);   // a) Creatre new person
+const person2 = new Person("Ariff", 30);    // b) Create second person
+console.log(person1);                       // c) Print out
+console.log(person2);                       // c) Print out
+
+class PersonClass {                         // d) rewrite constructor function called PersonClass
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+        this.human = true;
+    }
+}
+
+const person3 = new PersonClass("John", 29);
+console.log(person3);                       // d) Print out
+
+function Person(name, age) {                // e) For constructor function:
+    this.name = name;
+    this.age = age;
+    this.human = true;
+    this.canDrive = function() {
+        return this.age >= 18;
+    };
+}
+
+class PersonClass {                          // e) For Class:
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.human = true;
+    }
+    canDrive() {
+        return this.age >= 18
+    }
+}
